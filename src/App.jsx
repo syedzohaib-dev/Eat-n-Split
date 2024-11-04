@@ -9,18 +9,18 @@ function App() {
   const [selectedFriend, setSelectedFriend] = useState(null)
   const [friends, setFriends] = useState([
     {
-      img: "https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001877.png",
-      name: "John",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EijPK7ZtYrlNue8jazOOofZQrtJGSl3DrA&s",
+      name: "Michel Desenta",
       payment: 20,
     },
     {
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGdpcmwlMjBwcm9maWxlfGVufDB8fDB8fHww",
-      name: "Sarah",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc2e8Avgi6lwQTPQ4B8e5phT9ntN9cmzSgCw&s",
+      name: "Franklin Clinton",
       payment: 30,
     },
     {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOyweUERP_PkAHflHnp-jMxGTx_D-DD638A&s",
-      name: "Peter",
+      img: "https://i.pinimg.com/736x/c3/f0/03/c3f003a1844f94f818bd4a8986f4b639.jpg",
+      name: "Trevor Philips",
       payment: 50,
     },
 
@@ -33,7 +33,7 @@ function App() {
         <div className="box">
           <div className="box1">
             <Friend friends={friends} setSelectedFriend={setSelectedFriend} />
-            <Addfriend />
+            <Addfriend friends={friends} setFriends={setFriends} />
           </div>
           <div className="box2">
             <Splitbill />

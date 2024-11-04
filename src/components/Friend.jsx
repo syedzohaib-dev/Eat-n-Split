@@ -3,7 +3,7 @@ import './Friend.css'
 
 function Friend({ friends, setSelectedFriend }) {
 
-    const selectHandler = () => {
+    const selectHandler = (friends) => {
         setSelectedFriend(friends)
     }
 
@@ -12,15 +12,15 @@ function Friend({ friends, setSelectedFriend }) {
 
             <div className="friendDiv">
                 {
-                    friends.map((frnd) => (
-                        <div className="friendDivChildren">
+                    friends.map((frnd, index) => (
+                        <div className="friendDivChildren" key={index}>
                             <div className="friendDivImg">
                                 <img src={frnd.img} alt="" /> </div>
                             <div className="friendDivCenter">
                                 <p className='friendDivName'>{frnd.name}</p>
                                 <p className='youOwn'>{frnd.payment}</p>
                             </div>
-                            <button type="button" onClick={selectHandler} className='friendDivButton'>Select</button>
+                            <button type="button" onClick={selectHandler(setSelectedFriend(frnd))} className='friendDivButton'>Select</button>
                         </div>
                     ))
                 }
