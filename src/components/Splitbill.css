@@ -1,0 +1,74 @@
+.splitBillMain {
+    width: 100%;
+    height: 100%;
+    background-color: #f7e3bc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.splitHeading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.splitFriendName {
+    width: 90%;
+    height: 40px;
+    background-color: #f7e3bc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.splitFriendName span {
+    width: 50%;
+    height: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.85rem;
+    
+}
+
+.splitFriendName input {
+    width: 50%;
+    height: 80%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-inline: 10px;
+}
+
+.splitSelect {
+    width: 50%;
+    height: 80%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-inline: 10px;
+}
+
+.splitBill {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.splitBill button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: #ff9e3f;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.85rem;
+
+}
