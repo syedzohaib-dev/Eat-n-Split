@@ -36,7 +36,13 @@ function App() {
             <Addfriend friends={friends} setFriends={setFriends} />
           </div>
           <div className="box2">
-            <Splitbill />
+            {
+              selectedFriend && (
+                <Splitbill friends={friends} selectedFriend={selectedFriend}  />
+              )
+            }
+
+
           </div>
         </div>
       </div>

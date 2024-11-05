@@ -21,7 +21,7 @@ function Addfriend({ friends, setFriends }) {
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
           background: "#ff9e3f",
-          color:"black"
+          color: "black"
         },
       }).showToast())
     }

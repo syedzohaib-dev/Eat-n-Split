@@ -2,26 +2,12 @@ import React from 'react'
 import './Friend.css'
 
 function Friend({ friends, setSelectedFriend }) {
-
-    const selectHandler = (friends) => {
-        setSelectedFriend(friends)
-    }
-
     return (
         <>
-
             <div className="friendDiv">
                 {
                     friends.map((frnd, index) => (
-                        <div className="friendDivChildren" key={index}>
-                            <div className="friendDivImg">
-                                <img src={frnd.img} alt="" /> </div>
-                            <div className="friendDivCenter">
-                                <p className='friendDivName'>{frnd.name}</p>
-                                <p className='youOwn'>{frnd.payment}</p>
-                            </div>
-                            <button type="button" onClick={selectHandler(setSelectedFriend(frnd))} className='friendDivButton'>Select</button>
-                        </div>
+                        <Friendy key={index} detail={frnd} setSelectedFriend={setSelectedFriend} />
                     ))
                 }
             </div>
@@ -32,3 +18,22 @@ function Friend({ friends, setSelectedFriend }) {
 
 export default Friend
 
+const Friendy = ({ detail, setSelectedFriend, billValue }) => {
+    const selectHandler = () => {
+
+        setSelectedFriend(detail)
+    }
+    return (
+        <div className="friendDivChildren" >
+            <div className="friendDivImg">
+                <img src={detail.img} alt="" /> </div>
+            <div className="friendDivCenter">
+                <p className='friendDivName'>{detail.name}</p>
+                <p className='youOwn'>{detail.name} need to pay {billValue}</p>
+            </div>
+            <button type="button" onClick={selectHandler} className='friendDivButton'>Select</button>
+        </div>
+
+
+    )
+}
