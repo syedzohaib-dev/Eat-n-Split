@@ -1,13 +1,13 @@
 import React from 'react'
 import './Friend.css'
 
-function Friend({ friends, setSelectedFriend }) {
+function Friend({ friends, setSelectedFriend, value }) {
     return (
         <>
             <div className="friendDiv">
                 {
                     friends.map((frnd, index) => (
-                        <Friendy key={index} detail={frnd} setSelectedFriend={setSelectedFriend} />
+                        <Friendy key={index} detail={frnd} setSelectedFriend={setSelectedFriend} value={value[frnd.name] || 0} />
                     ))
                 }
             </div>
@@ -18,7 +18,7 @@ function Friend({ friends, setSelectedFriend }) {
 
 export default Friend
 
-const Friendy = ({ detail, setSelectedFriend, billValue }) => {
+const Friendy = ({ detail, setSelectedFriend, value }) => {
     const selectHandler = () => {
 
         setSelectedFriend(detail)
@@ -29,7 +29,7 @@ const Friendy = ({ detail, setSelectedFriend, billValue }) => {
                 <img src={detail.img} alt="" /> </div>
             <div className="friendDivCenter">
                 <p className='friendDivName'>{detail.name}</p>
-                <p className='youOwn'>{detail.name} need to pay {billValue}</p>
+                <p className='youOwn'>need to pay {value}</p>
             </div>
             <button type="button" onClick={selectHandler} className='friendDivButton'>Select</button>
         </div>

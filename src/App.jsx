@@ -26,19 +26,21 @@ function App() {
 
   ])
 
+  const [value, setValue] = useState({})
+  console.log(value)
 
   return (
     <>
       <div className="bigContainer">
         <div className="box">
           <div className="box1">
-            <Friend friends={friends} setSelectedFriend={setSelectedFriend} />
+            <Friend friends={friends} setSelectedFriend={setSelectedFriend} value={value} />
             <Addfriend friends={friends} setFriends={setFriends} />
           </div>
           <div className="box2">
             {
               selectedFriend && (
-                <Splitbill friends={friends} selectedFriend={selectedFriend}  />
+                <Splitbill friends={friends} selectedFriend={selectedFriend} setValue={setValue} />
               )
             }
 
